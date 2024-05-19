@@ -6,6 +6,8 @@ import {
   deleteComment,
   addReply,
   deleteReply,
+  likeComment,
+  unlikeComment ,
 } from "../controllers/comment.controller.js";
 
 
@@ -16,6 +18,10 @@ router.put("/:commentId", updateComment);
 router.delete("/:commentId", deleteComment);
 router.post("/:commentId/replies", addReply);
 router.delete("/replies/:replyId", deleteReply);
+
+// Inside your router
+router.post("/:commentId/like", likeComment);
+router.delete("/:commentId/unlike", unlikeComment);
 
 
 

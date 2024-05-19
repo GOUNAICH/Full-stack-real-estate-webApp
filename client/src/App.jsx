@@ -15,6 +15,7 @@ import AgentsPage from "./routes/agentsPage/agentsPage";
 import UpdatePostPage from "./routes/updatePost/updatePost";
 import ProfileUser from "./routes/Profile/ProfileUser";
 import CommentsPage from "./routes/commentPage/commentPage";
+import VideoCallPage from "./routes/videoCallPage/videoCallPage";
 function App() {
   const router = createBrowserRouter([
     {
@@ -87,7 +88,11 @@ function App() {
           path: "/comments/:userId/:postId",
           element: <CommentsPage />,
         },
-        
+        {
+          path: "/video-call",
+          element: <VideoCallPage />,
+        },
+
       ],
     },
   ]);

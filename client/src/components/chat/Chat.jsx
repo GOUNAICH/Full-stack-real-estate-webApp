@@ -5,6 +5,8 @@ import apiRequest from "../../lib/apiRequest";
 import { format } from "timeago.js";
 import { SocketContext } from "../../context/SocketContext";
 import { useNotificationStore } from "../../lib/notificationStore";
+import { AiOutlinePhone } from 'react-icons/ai';
+import { Link } from "react-router-dom";
 
 function Chat({ chats }) {
   const [chat, setChat] = useState(null);
@@ -92,6 +94,9 @@ function Chat({ chats }) {
             <img src={c.receiver.avatar || "/noavatar.jpg"} alt="" />
             <span>{c.receiver.username}</span>
             <p>{c.lastMessage}</p>
+            <Link to="/video-call">
+              <AiOutlinePhone className="phoneIcon" />
+            </Link>
           </div>
         ))}
       </div>
